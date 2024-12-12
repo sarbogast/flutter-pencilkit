@@ -362,31 +362,47 @@ class _MyAppState extends State<MyApp> {
                       ],
                     )),
                 Expanded(
-                  child: PencilKit(
-                    onPencilKitViewCreated: (controller) =>
-                        this.controller = controller,
-                    alwaysBounceVertical: false,
-                    alwaysBounceHorizontal: true,
-                    isRulerActive: false,
-                    drawingPolicy: PencilKitIos14DrawingPolicy.anyInput,
-                    backgroundColor: Colors.yellow.withOpacity(0.1),
-                    isOpaque: false,
-                    toolPickerVisibilityDidChange: (isVisible) =>
-                        print('toolPickerVisibilityDidChange $isVisible'),
-                    toolPickerIsRulerActiveDidChange: (isRulerActive) => print(
-                        'toolPickerIsRulerActiveDidChange $isRulerActive'),
-                    toolPickerFramesObscuredDidChange: () =>
-                        print('toolPickerFramesObscuredDidChange'),
-                    toolPickerSelectedToolDidChange: () =>
-                        print('toolPickerSelectedToolDidChange'),
-                    canvasViewDidBeginUsingTool: () =>
-                        print('canvasViewDidBeginUsingTool'),
-                    canvasViewDidEndUsingTool: () =>
-                        print('canvasViewDidEndUsingTool'),
-                    canvasViewDrawingDidChange: () =>
-                        print('canvasViewDrawingDidChange'),
-                    canvasViewDidFinishRendering: () =>
-                        print('canvasViewDidFinishRendering'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 400,
+                      height: 400,
+                      child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        shape: const CircleBorder(
+                          side: BorderSide(
+                            color: Colors.red,
+                            width: 1,
+                          ),
+                        ),
+                        child: PencilKit(
+                          onPencilKitViewCreated: (controller) =>
+                              this.controller = controller,
+                          alwaysBounceVertical: false,
+                          alwaysBounceHorizontal: true,
+                          isRulerActive: false,
+                          drawingPolicy: PencilKitIos14DrawingPolicy.anyInput,
+                          backgroundColor: Colors.blue,
+                          isOpaque: false,
+                          toolPickerVisibilityDidChange: (isVisible) =>
+                              print('toolPickerVisibilityDidChange $isVisible'),
+                          toolPickerIsRulerActiveDidChange: (isRulerActive) =>
+                              print(
+                                  'toolPickerIsRulerActiveDidChange $isRulerActive'),
+                          toolPickerFramesObscuredDidChange: () =>
+                              print('toolPickerFramesObscuredDidChange'),
+                          toolPickerSelectedToolDidChange: () =>
+                              print('toolPickerSelectedToolDidChange'),
+                          canvasViewDidBeginUsingTool: () =>
+                              print('canvasViewDidBeginUsingTool'),
+                          canvasViewDidEndUsingTool: () =>
+                              print('canvasViewDidEndUsingTool'),
+                          canvasViewDrawingDidChange: () =>
+                              print('canvasViewDrawingDidChange'),
+                          canvasViewDidFinishRendering: () =>
+                              print('canvasViewDidFinishRendering'),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ],

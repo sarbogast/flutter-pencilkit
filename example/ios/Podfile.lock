@@ -32,8 +32,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  fluttertoast: 31b00dabfa7fb7bacd9e7dbee580d7a2ff4bf265
-  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  fluttertoast: e9a18c7be5413da53898f660530c56f35edfba9c
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
   pencil_kit: 97b56e7e011e7bddd920311849a2105c4b0b7923
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
